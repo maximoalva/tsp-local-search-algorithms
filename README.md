@@ -1,6 +1,10 @@
 # TSP Local Search Algorithms
+> Programación III  
+> Tecnicatura Universitaria en Inteligencia Artificial (Universidad Nacional de Rosario)  
+> Máximo Alva  
+> 2024
 
-Implementation of local search algorithms for the **Traveling Salesman Problem (TSP)**, developed as part of **Programación III** in the **Tecnicatura Universitaria en Inteligencia Artificial** at the **Universidad Nacional de Rosario (UNR)**.
+Implementation of local search algorithms for the **Traveling Salesman Problem (TSP)**.
 
 The project explores and compares three local search strategies using a **2-opt neighborhood**:
 
@@ -93,22 +97,6 @@ It also generates a graphical comparison showing:
 
 ## Project Structure
 
-```text
-.
-├── instances/
-│   └── *.tsp
-├── load.py
-├── main.py
-├── parse.py
-├── plot.py
-├── problem.py
-├── requirements.txt
-├── search.py
-└── README.md
-```
-
-### Main modules
-
 - **`main.py`** — command-line entry point. Loads the instance, runs the algorithms, prints statistics, and displays the resulting tours.
 - **`search.py`** — contains the local search framework and the three algorithms.
 - **`problem.py`** — defines the TSP optimization problem, including states, objective values, neighborhood operations, and random resets.
@@ -117,11 +105,34 @@ It also generates a graphical comparison showing:
 - **`plot.py`** — visualizes the initial and final tours.
 - **`instances/`** — contains TSP problem instances.
 
-## Requirements
+## Requirements and installation
 
-The assignment specifies **Python 3.10 or higher**.
+**Python 3.10 or higher** is required.
 
-Install the required dependencies with:
+Clone the repository:
+
+```bash
+git clone https://github.com/maximoalva/tsp-local-search-algorithms.git
+cd tsp-local-search-algorithms
+```
+
+Create and activate a virtual environment:
+
+### Linux / macOS
+
+```bash
+python3.10 -m venv venv
+source venv/bin/activate
+```
+
+### Windows
+
+```bash
+py -3.10 -m venv venv
+venv\Scripts\activate
+```
+
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -160,7 +171,3 @@ This project focuses on several important concepts in heuristic optimization:
 - **Tabu lists** as a memory-based mechanism for escaping local optima.
 - **2-opt** as a tour-improvement operator for the TSP.
 - The trade-off between **solution quality, exploration, and execution time**.
-
-## Academic Context
-
-This repository was developed for a practical assignment in **Programación III** at the **Universidad Nacional de Rosario**, focused on implementing local search techniques for combinatorial optimization problems.
